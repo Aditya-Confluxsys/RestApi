@@ -24,13 +24,6 @@ public class ProductController {
         Product newproduct = productService.saveProduct(product);
         return ResponseEntity.ok(newproduct);
     }
-
-//    @PostMapping
-//    public ResponseEntity<Product> createProduct(@RequestBody Product product) {
-//        Product savedProduct = productService.createProduct(product);
-//        return new ResponseEntity<>(savedProduct, HttpStatus.CREATED);
-//    }
-
     @GetMapping
     public List<Product> getAllProducts(){
         return productService.getAllProduct();
